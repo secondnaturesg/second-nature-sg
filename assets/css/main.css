@@ -366,7 +366,7 @@ button {
 }
 
 /* HOMEPAGE FOREST IMAGE */
-/* Only newforest.webp is used in this hero frame */
+/* Only index1.webp is used in this hero frame */
 
 .hero-visual {
   min-height: 535px;
@@ -388,7 +388,7 @@ button {
       transparent 45%,
       rgba(3, 15, 2, .42) 100%
     ),
-    url("../img/newforest.webp");
+    url("../img/index1.webp");
 
   background-position: center, center;
   background-size: cover, cover;
