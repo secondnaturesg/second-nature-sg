@@ -20,6 +20,88 @@
 
   <link href="assets/img/second-nature-mark-green.png" rel="icon" type="image/png"/>
   <link href="assets/css/main.css" rel="stylesheet"/>
+
+  <!-- Gallery hover labels -->
+  <style>
+    .gallery-grid .gallery-item {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      margin: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #e9eddf;
+    }
+
+    .gallery-grid .gallery-item img {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-grid .gallery-item figcaption {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 6px;
+      padding: 20px;
+      background: linear-gradient(
+        180deg,
+        transparent 10%,
+        rgba(16, 35, 19, 0.90) 100%
+      );
+      color: #fff;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .gallery-grid .gallery-item figcaption strong {
+      display: block;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .gallery-grid .gallery-item figcaption span {
+      display: block;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    .gallery-grid .gallery-item:hover figcaption,
+    .gallery-grid .gallery-item:focus figcaption,
+    .gallery-grid .gallery-item:focus-visible figcaption {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .gallery-grid .gallery-item:focus-visible {
+      outline: 3px solid #2f3f1f;
+      outline-offset: 3px;
+    }
+
+    @media (hover: none) {
+      .gallery-grid .gallery-item figcaption {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .gallery-grid .gallery-item figcaption {
+        transition: none;
+      }
+    }
+  </style>
 </head>
 
 <body class="inner-page">
@@ -109,219 +191,483 @@
         <div class="grid grid-4 gallery-grid">
 
           <!-- GALLERY IMAGE 01 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Learning About Leaves and Twigs: Exploring the shapes, colours and textures of leaves and twigs through hands-on observation."
+          >
             <img
-              alt="Second Nature programme gallery 1"
+              alt="Learning About Leaves and Twigs"
               loading="lazy"
               src="assets/img/gallery1.webp"
             />
+            <figcaption>
+              <strong>Learning About Leaves and Twigs</strong>
+              <span>
+                Exploring the shapes, colours and textures of
+                leaves and twigs through hands-on observation.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 02 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Nature Walk: Taking time to notice plants, sounds and the living things around us."
+          >
             <img
-              alt="Second Nature programme gallery 2"
+              alt="Nature Walk"
               loading="lazy"
               src="assets/img/gallery2.webp"
             />
+            <figcaption>
+              <strong>Nature Walk</strong>
+              <span>
+                Taking time to notice plants, sounds and
+                the living things around us.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 03 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Intertidal Walk: Exploring the shore and the habitats shaped by changing tides."
+          >
             <img
-              alt="Second Nature programme gallery 3"
+              alt="Intertidal Walk"
               loading="lazy"
               src="assets/img/gallery3.webp"
             />
+            <figcaption>
+              <strong>Intertidal Walk</strong>
+              <span>
+                Exploring the shore and the habitats
+                shaped by changing tides.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 04 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Intertidal Walk: Looking closely at coastal plants, animals and life between the tides."
+          >
             <img
-              alt="Second Nature programme gallery 4"
+              alt="Intertidal Walk"
               loading="lazy"
               src="assets/img/gallery4.webp"
             />
+            <figcaption>
+              <strong>Intertidal Walk</strong>
+              <span>
+                Looking closely at coastal plants, animals
+                and life between the tides.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 05 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Mangrove Walk: Observing mangrove habitats and how plants adapt to coastal conditions."
+          >
             <img
-              alt="Second Nature programme gallery 5"
+              alt="Mangrove Walk"
               loading="lazy"
               src="assets/img/gallery5.webp"
             />
+            <figcaption>
+              <strong>Mangrove Walk</strong>
+              <span>
+                Observing mangrove habitats and how plants
+                adapt to coastal conditions.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 06 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Learning Buoyancy with Nature: Testing natural materials to see what floats, what sinks and why."
+          >
             <img
-              alt="Second Nature programme gallery 6"
+              alt="Learning Buoyancy with Nature"
               loading="lazy"
               src="assets/img/gallery6.webp"
             />
+            <figcaption>
+              <strong>Learning Buoyancy with Nature</strong>
+              <span>
+                Testing natural materials to see what
+                floats, what sinks and why.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 07 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Twig Raft Making: Building small rafts from twigs and exploring how they float."
+          >
             <img
-              alt="Second Nature programme gallery 7"
+              alt="Twig Raft Making"
               loading="lazy"
               src="assets/img/gallery7.webp"
             />
+            <figcaption>
+              <strong>Twig Raft Making</strong>
+              <span>
+                Building small rafts from twigs and
+                exploring how they float.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 08 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Leaf Frame: Using leaves to create a simple frame inspired by nature."
+          >
             <img
-              alt="Second Nature programme gallery 8"
+              alt="Leaf Frame"
               loading="lazy"
               src="assets/img/gallery8.webp"
             />
+            <figcaption>
+              <strong>Leaf Frame</strong>
+              <span>
+                Using leaves to create a simple frame
+                inspired by nature.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 09 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Therapeutic Horticulture: Taking part in gentle plant-based tasks that encourage participation and wellbeing."
+          >
             <img
-              alt="Second Nature programme gallery 9"
+              alt="Therapeutic Horticulture"
               loading="lazy"
               src="assets/img/gallery9.webp"
             />
+            <figcaption>
+              <strong>Therapeutic Horticulture</strong>
+              <span>
+                Taking part in gentle plant-based tasks
+                that encourage participation and wellbeing.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 10 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Leaf Collection: Gathering fallen leaves to compare their shapes, colours and textures."
+          >
             <img
-              alt="Second Nature programme gallery 10"
+              alt="Leaf Collection"
               loading="lazy"
               src="assets/img/gallery10.webp"
             />
+            <figcaption>
+              <strong>Leaf Collection</strong>
+              <span>
+                Gathering fallen leaves to compare their
+                shapes, colours and textures.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 11 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Leaf and Flower Frame: Arranging leaves and flowers into a creative nature-inspired frame."
+          >
             <img
-              alt="Second Nature programme gallery 11"
+              alt="Leaf and Flower Frame"
               loading="lazy"
               src="assets/img/gallery11.webp"
             />
+            <figcaption>
+              <strong>Leaf and Flower Frame</strong>
+              <span>
+                Arranging leaves and flowers into a
+                creative nature-inspired frame.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 12 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Flower Stamping: Using flowers to create prints and explore colour, patterns and texture."
+          >
             <img
-              alt="Second Nature programme gallery 12"
+              alt="Flower Stamping"
               loading="lazy"
               src="assets/img/gallery12.webp"
             />
+            <figcaption>
+              <strong>Flower Stamping</strong>
+              <span>
+                Using flowers to create prints and explore
+                colour, patterns and texture.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 13 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Leaf and Flower Frame: Combining natural materials to make a keepsake frame."
+          >
             <img
-              alt="Second Nature programme gallery 13"
+              alt="Leaf and Flower Frame"
               loading="lazy"
               src="assets/img/gallery13.webp"
             />
+            <figcaption>
+              <strong>Leaf and Flower Frame</strong>
+              <span>
+                Combining natural materials to make
+                a keepsake frame.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 14 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Flower Coaster: Making a decorative coaster using flowers and nature-inspired designs."
+          >
             <img
-              alt="Second Nature programme gallery 14"
+              alt="Flower Coaster"
               loading="lazy"
               src="assets/img/gallery14.webp"
             />
+            <figcaption>
+              <strong>Flower Coaster</strong>
+              <span>
+                Making a decorative coaster using flowers
+                and nature-inspired designs.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 15 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Leaf and Flower Frame: Exploring different arrangements of leaves and flowers in a frame."
+          >
             <img
-              alt="Second Nature programme gallery 15"
+              alt="Leaf and Flower Frame"
               loading="lazy"
               src="assets/img/gallery15.webp"
             />
+            <figcaption>
+              <strong>Leaf and Flower Frame</strong>
+              <span>
+                Exploring different arrangements of leaves
+                and flowers in a frame.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 16 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Leaf and Flower Frame: Creating a personal frame with leaves and flowers gathered for the activity."
+          >
             <img
-              alt="Second Nature programme gallery 16"
+              alt="Leaf and Flower Frame"
               loading="lazy"
               src="assets/img/gallery16.webp"
             />
+            <figcaption>
+              <strong>Leaf and Flower Frame</strong>
+              <span>
+                Creating a personal frame with leaves and
+                flowers gathered for the activity.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 17 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Planting: Getting hands-on with planting and everyday plant-care skills."
+          >
             <img
-              alt="Second Nature programme gallery 17"
+              alt="Planting"
               loading="lazy"
               src="assets/img/gallery17.webp"
             />
+            <figcaption>
+              <strong>Planting</strong>
+              <span>
+                Getting hands-on with planting and
+                everyday plant-care skills.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 18 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Microgreen Planting: Sowing microgreens and learning what seedlings need to grow."
+          >
             <img
-              alt="Second Nature programme gallery 18"
+              alt="Microgreen Planting"
               loading="lazy"
               src="assets/img/gallery18.webp"
             />
+            <figcaption>
+              <strong>Microgreen Planting</strong>
+              <span>
+                Sowing microgreens and learning what
+                seedlings need to grow.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 19 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Nature Walk: Slowing down and paying attention to our local green spaces."
+          >
             <img
-              alt="Second Nature programme gallery 19"
+              alt="Nature Walk"
               loading="lazy"
               src="assets/img/gallery19.webp"
             />
+            <figcaption>
+              <strong>Nature Walk</strong>
+              <span>
+                Slowing down and paying attention to
+                our local green spaces.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 20 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Nature Walk: Sharing observations and conversations during a walk in nature."
+          >
             <img
-              alt="Second Nature programme gallery 20"
+              alt="Nature Walk"
               loading="lazy"
               src="assets/img/gallery20.webp"
             />
+            <figcaption>
+              <strong>Nature Walk</strong>
+              <span>
+                Sharing observations and conversations
+                during a walk in nature.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 21 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Therapeutic Horticulture: Connecting with plants through accessible gardening and care activities."
+          >
             <img
-              alt="Second Nature programme gallery 21"
+              alt="Therapeutic Horticulture"
               loading="lazy"
               src="assets/img/gallery21.webp"
             />
+            <figcaption>
+              <strong>Therapeutic Horticulture</strong>
+              <span>
+                Connecting with plants through accessible
+                gardening and care activities.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 22 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Guided Therapeutic Garden Tour: Exploring the plants, features and uses of a therapeutic garden."
+          >
             <img
-              alt="Second Nature programme gallery 22"
+              alt="Guided Therapeutic Garden Tour"
               loading="lazy"
               src="assets/img/gallery22.webp"
             />
+            <figcaption>
+              <strong>Guided Therapeutic Garden Tour</strong>
+              <span>
+                Exploring the plants, features and uses
+                of a therapeutic garden.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 23 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Nature-Based Activity: Using natural materials for playful, hands-on learning and making."
+          >
             <img
-              alt="Second Nature programme gallery 23"
+              alt="Nature-Based Activity"
               loading="lazy"
               src="assets/img/gallery23.webp"
             />
+            <figcaption>
+              <strong>Nature-Based Activity</strong>
+              <span>
+                Using natural materials for playful,
+                hands-on learning and making.
+              </span>
+            </figcaption>
           </figure>
 
           <!-- GALLERY IMAGE 24 -->
-          <figure class="gallery-item">
+          <figure
+            class="gallery-item"
+            tabindex="0"
+            aria-label="Intergenerational Nature Activity: Bringing different generations together through a shared nature-based activity."
+          >
             <img
-              alt="Second Nature programme gallery 24"
+              alt="Intergenerational Nature Activity"
               loading="lazy"
               src="assets/img/gallery24.webp"
             />
+            <figcaption>
+              <strong>Intergenerational Nature Activity</strong>
+              <span>
+                Bringing different generations together
+                through a shared nature-based activity.
+              </span>
+            </figcaption>
           </figure>
 
         </div>
@@ -437,7 +783,6 @@
         <div>
           © 2026 Second Nature. All rights reserved.
         </div>
-
 
       </div>
 
