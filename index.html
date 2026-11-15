@@ -1578,6 +1578,113 @@ h1,h2,h3,h4,h5,h6,.quote,.tagline,.callout-quote{font-family:'Cormorant Garamond
 .photo-stack{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
 .photo-stack img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:18px;box-shadow:var(--shadow)}
 @media(max-width:580px){.photo-stack{grid-template-columns:1fr}}
+
+   .home-team-thumbs .team-hover-item {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #e9eddf;
+  text-decoration: none;
+}
+
+/* Team images */
+
+.home-team-thumbs .team-hover-item img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Hover caption */
+
+.home-team-thumbs .team-hover-caption {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 6px;
+
+  padding: 20px;
+
+  background: linear-gradient(
+    180deg,
+    transparent 10%,
+    rgba(16, 35, 19, 0.90) 100%
+  );
+
+  color: #ffffff;
+
+  opacity: 0;
+  transform: translateY(8px);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+
+  pointer-events: none;
+}
+
+/* Heading */
+
+.home-team-thumbs .team-hover-caption strong {
+  display: block;
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Description */
+
+.home-team-thumbs .team-hover-caption span {
+  display: block;
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Show text on hover or keyboard focus */
+
+.home-team-thumbs .team-hover-item:hover .team-hover-caption,
+.home-team-thumbs .team-hover-item:focus-visible .team-hover-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Keyboard focus */
+
+.home-team-thumbs .team-hover-item:focus-visible {
+  outline: 3px solid #2f3f1f;
+  outline-offset: 3px;
+}
+
+/* Touchscreen devices */
+
+@media (hover: none) {
+  .home-team-thumbs .team-hover-caption {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .home-team-thumbs .team-hover-caption {
+    transition: none;
+  }
+}
+   
   </style>
  </head>
  <body class="index-page">
@@ -1735,6 +1842,8 @@ h1,h2,h3,h4,h5,h6,.quote,.tagline,.callout-quote{font-family:'Cormorant Garamond
       <p>
        At Second Nature, we incorporate plants, natural materials and the outdoors as starting points for purposeful experiences. Sessions are adapted to participants' interests, abilities, comfort and learning goals.
       </p>
+         <p>
+We bring these experiences to life through the following approaches:     </p>
       <ul class="check-list">
        <li>
         Hands-on, inquiry-led learning
@@ -1967,13 +2076,14 @@ h1,h2,h3,h4,h5,h6,.quote,.tagline,.callout-quote{font-family:'Cormorant Garamond
        The thinking behind our work
       </span>
       <h2 style="font-size:clamp(2.2rem,4vw,3.4rem)">
-       One natural world. Several ways to work with it.
+      How do we make nature accessible to all?
       </h2>
       <p class="lead">
        Our programmes are inspired & influenced by Forest School, forest therapy, nature-based interventions, therapeutic horticulture, and recreational therapy.
       </p>
       <p>
        These inspirations help us shape sessions that are flexible, people-centred and data-driven, with learning drawn from participant feedback and pre- and post-programme evaluations where relevant.
+Our flow:
       </p>
       <div class="feature-row">
        <span class="mini-index">
@@ -2162,12 +2272,47 @@ h1,h2,h3,h4,h5,h6,.quote,.tagline,.callout-quote{font-family:'Cormorant Garamond
        Meet our team &nearrow;
       </a>
      </div>
-     <div class="home-team-thumbs">
-      <!-- Replace image file: assets/img/main1.webp -->
-      <img alt="Main community programme image 1" loading="lazy" src="assets/img/main1.webp"/>
-      <!-- Replace image file: assets/img/main2.webp -->
-      <img alt="Main community programme image 2" loading="lazy" src="assets/img/main2.webp"/>
-     </div>
+   <div class="home-team-thumbs">
+
+  <!-- IMAGE 1 -->
+  <a class="team-hover-item" href="team.html">
+
+    <img
+      src="assets/img/main1.webp"
+      alt="Our Leadership Team"
+      loading="lazy"
+    >
+
+    <div class="team-hover-caption">
+      <strong>Our Leadership Team</strong>
+      <span>
+        Meet the people who lead our programmes
+        and community initiatives.
+      </span>
+    </div>
+
+  </a>
+
+  <!-- IMAGE 2 -->
+  <a class="team-hover-item" href="team.html">
+
+    <img
+      src="assets/img/main2.webp"
+      alt="Our Advisors"
+      loading="lazy"
+    >
+
+    <div class="team-hover-caption">
+      <strong>Our Advisors</strong>
+      <span>
+        Bringing experience and knowledge
+        to support our work.
+      </span>
+    </div>
+
+  </a>
+
+</div>
     </div>
    </section>
    <section class="section" id="gallery">
@@ -2211,7 +2356,7 @@ h1,h2,h3,h4,h5,h6,.quote,.tagline,.callout-quote{font-family:'Cormorant Garamond
       Respect for people & place
       </span>
       <h2 style="font-size:2.6rem">
-       Your comfort matters. So does the living environment.
+       Your comfort matters.
       </h2>
       <p>
        Plant sensitivities, allergies, insects, heat, accessibility and familiarity with outdoor spaces are part of our planning. Participation is by invitation, not pressure.
