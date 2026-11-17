@@ -825,14 +825,7 @@ button {
   background: linear-gradient(135deg, #192618, #7e8c3e);
 }
 
-.programme-card .card-cover::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("../img/botanical.svg") center 43% / 65% no-repeat;
-  mix-blend-mode: screen;
-  opacity: .22;
-}
+
 
 .programme-card .card-body {
   padding: 29px;
