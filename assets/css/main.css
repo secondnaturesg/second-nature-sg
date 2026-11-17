@@ -1882,5 +1882,16 @@ h6,
   .gallery-item figcaption span {
     font-size: .69rem;
   }
+/* Square images for all programme detail pages */
 
+.details-banner.programme-detail-banner {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  background-position: center;
+  background-size: cover;
+  border-radius: 25px;
+}
+}
 }
