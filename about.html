@@ -22,8 +22,8 @@
   <link rel="icon" type="image/png" href="assets/img/second-nature-mark-green.png">
   <link rel="stylesheet" href="assets/css/main.css">
 
-  <!-- SVG icons use the same styling as the Index page -->
   <style>
+    /* Existing styles */
     .icon-box.icon-svg {
       font-size: 0;
       color: var(--forest, #2f3f1f);
@@ -46,6 +46,70 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    /* Our Ecosystem: continuous left-to-right logo gallery */
+    .ecosystem-marquee {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .ecosystem-track {
+      display: flex;
+      gap: 24px;
+      width: max-content;
+      animation: ecosystem-scroll-right 45s linear infinite;
+    }
+
+    .ecosystem-set {
+      display: flex;
+      gap: 24px;
+      flex-shrink: 0;
+    }
+
+    .ecosystem-logo {
+      width: 170px;
+      height: 110px;
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border: 1px solid rgba(47, 63, 31, 0.12);
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+
+    .ecosystem-logo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @keyframes ecosystem-scroll-right {
+      from {
+        transform: translateX(calc(-50% - 12px));
+      }
+
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    .ecosystem-marquee:hover .ecosystem-track {
+      animation-play-state: paused;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ecosystem-marquee {
+        overflow-x: auto;
+      }
+
+      .ecosystem-track {
+        animation: none;
+      }
     }
   </style>
 </head>
@@ -78,7 +142,7 @@
       </nav>
 
       <a class="btn-getstarted" href="contact.html">
-        Plan a session <span aria-hidden="true">&nearrow;</span>
+        Plan a session <span aria-hidden="true">&nearr;</span>
       </a>
 
       <button
@@ -88,7 +152,13 @@
         aria-expanded="false"
         aria-label="Toggle menu"
       >
-        <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <svg
+          aria-hidden="true"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
           <path d="M4 7h16M4 12h16M4 17h16"></path>
         </svg>
       </button>
@@ -109,8 +179,13 @@
         </nav>
 
         <span class="eyebrow">Our story</span>
+
         <h1>Rooted in community. Growing better, together.</h1>
-        <p>Second Nature began as a small ground-up effort to bring people back into contact with the living world.</p>
+
+        <p>
+          Second Nature began as a small ground-up effort to bring
+          people back into contact with the living world.
+        </p>
 
       </div>
     </section>
@@ -121,18 +196,39 @@
 
         <div>
           <span class="eyebrow">Where we started</span>
-          <h2 style="font-size: 2.9rem;">Reconnect with Nature, April 2024.</h2>
 
-          <p class="lead">It began with a simple thought: nature should feel accessible to everyone, regardless of age or background.</p>
+          <h2 style="font-size: 2.9rem;">
+            Reconnect with Nature, April 2024.
+          </h2>
 
-          <p>Our ground-up initiative, Reconnect with Nature, started in April 2024. As we received more funding support in April and June 2025, we were able to bring our activities to more people and develop programmes across learning, wellbeing and community participation.</p>
+          <p class="lead">
+            It began with a simple thought: nature should feel accessible
+            to everyone, regardless of age or background.
+          </p>
 
-          <p>In March 2026, we adopted the name <strong>Second Nature</strong>, reflecting a broader commitment to making everyday connections with the natural world feel familiar, welcoming and meaningful.</p>
+          <p>
+            Our ground-up initiative, Reconnect with Nature, started in
+            April 2024. As we received more funding support in April and
+            June 2025, we were able to bring our activities to more people
+            and develop programmes across learning, wellbeing and
+            community participation.
+          </p>
 
-          <p>Today, we have reached more than 2,600 participants. Based on pre- and post-programme evaluations, 83% reported feeling more positive and 89.2% reported feeling less stressed after a session.</p>
+          <p>
+            In March 2026, we adopted the name
+            <strong>Second Nature</strong>, reflecting a broader
+            commitment to making everyday connections with the natural
+            world feel familiar, welcoming and meaningful.
+          </p>
+
+          <p>
+            Today, we have reached more than 2,600 participants.
+            Based on pre- and post-programme evaluations, 83% reported
+            feeling more positive and 89.2% reported feeling less
+            stressed after a session.
+          </p>
         </div>
 
-        <!-- Replaces the botanical.svg illustration -->
         <div class="art-frame">
           <img
             class="botanical"
@@ -152,7 +248,11 @@
         <div class="section-head center">
           <span class="eyebrow">What guides us</span>
           <h2>Our GOOD approach.</h2>
-          <p>Drawing from the values used across our related community work, we focus on learning, openness, responsibility and care.</p>
+
+          <p>
+            Drawing from the values used across our related community
+            work, we focus on learning, openness, responsibility and care.
+          </p>
         </div>
 
         <div class="grid grid-4">
@@ -166,8 +266,12 @@
                 <path d="M12 12c0-5 3-8 8-8 0 5-3 8-8 8Z"></path>
               </svg>
             </div>
+
             <h3>Growth</h3>
-            <p>Support learning, confidence and participation through meaningful experiences with nature.</p>
+            <p>
+              Support learning, confidence and participation through
+              meaningful experiences with nature.
+            </p>
           </article>
 
           <!-- Openness -->
@@ -178,8 +282,12 @@
                 <circle cx="12" cy="12" r="3"></circle>
               </svg>
             </div>
+
             <h3>Openness</h3>
-            <p>Stay curious, welcome different needs and consider feedback when planning activities.</p>
+            <p>
+              Stay curious, welcome different needs and consider
+              feedback when planning activities.
+            </p>
           </article>
 
           <!-- Ownership -->
@@ -192,8 +300,12 @@
                 <path d="M17 12a1.5 1.5 0 0 1 3 0v3c0 4-2.5 6-6 6h-3c-2 0-3-1-4.5-3L4 15.5a1.6 1.6 0 0 1 2.3-2.2L8 15"></path>
               </svg>
             </div>
+
             <h3>Ownership</h3>
-            <p>Take responsibility for programme choices, participant support and our impact on green spaces.</p>
+            <p>
+              Take responsibility for programme choices, participant
+              support and our impact on green spaces.
+            </p>
           </article>
 
           <!-- Do No Harm -->
@@ -203,50 +315,41 @@
                 <path d="M12 21s-8-4.8-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.2-8 11-8 11Z"></path>
               </svg>
             </div>
+
             <h3>Do No Harm</h3>
-            <p>Consider participant wellbeing, plant safety, environmental care and each person's right to opt out.</p>
+            <p>
+              Consider participant wellbeing, plant safety,
+              environmental care and each person's right to opt out.
+            </p>
           </article>
 
         </div>
       </div>
     </section>
 
-    <!-- Milestones -->
+    <!-- The people behind Second Nature -->
+    <!-- Replaces the previous Our Milestones section -->
     <section class="section">
       <div class="container">
 
-        <div class="section-head">
-          <span class="eyebrow">Our milestones</span>
-          <h2>How we grew.</h2>
+        <div class="mini-cta">
+          <div>
+            <span class="eyebrow">
+              The people behind Second Nature
+            </span>
+
+            <h2>Our leadership and advisors</h2>
+
+            <p>
+              Meet the team supporting our nature-centred work.
+            </p>
+          </div>
+
+          <a class="btn btn-primary" href="team.html">
+            Meet the team &nearr;
+          </a>
         </div>
 
-        <div class="timeline">
-
-          <div class="card">
-            <time>Apr 2024</time>
-            <h3>The initiative begins</h3>
-            <p>Reconnect with Nature starts as a community-led effort.</p>
-          </div>
-
-          <div class="card">
-            <time>Apr 2025</time>
-            <h3>Funding support</h3>
-            <p>New support helps broaden programme delivery.</p>
-          </div>
-
-          <div class="card">
-            <time>Jun 2025</time>
-            <h3>Further support</h3>
-            <p>Additional funding supports the next phase.</p>
-          </div>
-
-          <div class="card">
-            <time>Mar 2026</time>
-            <h3>A new name</h3>
-            <p>Our work continues under Second Nature.</p>
-          </div>
-
-        </div>
       </div>
     </section>
 
@@ -256,163 +359,290 @@
 
         <div>
           <span class="eyebrow">Who we work with</span>
-          <h2 style="font-size: 2.6rem;">One programme model does not fit every group.</h2>
-          <p>We work across age groups and settings, including early childhood, schools, youth, working adults, families and seniors. Programmes may be adapted for participants with additional access or support needs, subject to a suitability review.</p>
-          <p>Depending on the group, a session may focus on science learning, social interaction, sensory engagement, practical tasks, personal reflection or simply creating an enjoyable connection with green spaces.</p>
+
+          <h2 style="font-size: 2.6rem;">
+            One programme model does not fit every group.
+          </h2>
+
+          <p>
+            We work across age groups and settings, including early
+            childhood, schools, youth, working adults, families and
+            seniors. Programmes may be adapted for participants with
+            additional access or support needs, subject to a
+            suitability review.
+          </p>
+
+          <p>
+            Depending on the group, a session may focus on science
+            learning, social interaction, sensory engagement,
+            practical tasks, personal reflection or simply creating
+            an enjoyable connection with green spaces.
+          </p>
         </div>
 
-    
-<div class="grid grid-2">
+        <div class="grid grid-2">
 
-  <!-- Children & Youth -->
-  <article class="card">
+          <!-- Children & Youth -->
+          <article class="card">
+            <div class="icon-box" aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#2f3f1f"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="display:block;"
+              >
+                <path d="M12 7v14"></path>
+                <path d="M3 18V5a2 2 0 0 1 2-2h2a6 6 0 0 1 5 2 6 6 0 0 1 5-2h2a2 2 0 0 1 2 2v13a1 1 0 0 1-1 1h-3a6 6 0 0 0-5 2 6 6 0 0 0-5-2H4a1 1 0 0 1-1-1Z"></path>
+              </svg>
+            </div>
 
-    <div class="icon-box" aria-hidden="true">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="#2f3f1f"
-        stroke-width="1.8"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        style="display:block;"
-      >
-        <path d="M12 7v14"></path>
-        <path d="M3 18V5a2 2 0 0 1 2-2h2a6 6 0 0 1 5 2 6 6 0 0 1 5-2h2a2 2 0 0 1 2 2v13a1 1 0 0 1-1 1h-3a6 6 0 0 0-5 2 6 6 0 0 0-5-2H4a1 1 0 0 1-1-1Z"></path>
-      </svg>
-    </div>
+            <h3>Children &amp; youth</h3>
 
-    <h3>Children &amp; youth</h3>
+            <p>
+              Play, questions, guided observations and nature-based science.
+            </p>
+          </article>
 
-    <p>
-      Play, questions, guided observations and nature-based science.
-    </p>
+          <!-- Adults & Workplaces -->
+          <article class="card">
+            <div class="icon-box" aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#2f3f1f"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="display:block;"
+              >
+                <rect x="3" y="7" width="18" height="14" rx="2"></rect>
+                <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                <path d="M3 12a20 20 0 0 0 18 0"></path>
+                <path d="M10 14h4"></path>
+              </svg>
+            </div>
 
-  </article>
+            <h3>Adults &amp; workplaces</h3>
 
-  <!-- Adults & Workplaces -->
-  <article class="card">
+            <p>
+              Attention, connection, outdoor participation and shared activity.
+            </p>
+          </article>
 
-    <div class="icon-box" aria-hidden="true">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="#2f3f1f"
-        stroke-width="1.8"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        style="display:block;"
-      >
-        <rect x="3" y="7" width="18" height="14" rx="2"></rect>
-        <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-        <path d="M3 12a20 20 0 0 0 18 0"></path>
-        <path d="M10 14h4"></path>
-      </svg>
-    </div>
+          <!-- Seniors & Care Groups -->
+          <article class="card">
+            <div class="icon-box" aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#2f3f1f"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="display:block;"
+              >
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z"></path>
+              </svg>
+            </div>
 
-    <h3>Adults &amp; workplaces</h3>
+            <h3>Seniors &amp; care groups</h3>
 
-    <p>
-      Attention, connection, outdoor participation and shared activity.
-    </p>
+            <p>
+              Accessible sensory engagement, gardening and meaningful tasks.
+            </p>
+          </article>
 
-  </article>
+          <!-- Communities -->
+          <article class="card">
+            <div class="icon-box" aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#2f3f1f"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="display:block;"
+              >
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
 
-  <!-- Seniors & Care Groups -->
-  <article class="card">
+            <h3>Communities</h3>
 
-    <div class="icon-box" aria-hidden="true">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="#2f3f1f"
-        stroke-width="1.8"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        style="display:block;"
-      >
-        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z"></path>
-      </svg>
-    </div>
+            <p>
+              Intergenerational activities and shared care for nature and place.
+            </p>
+          </article>
 
-    <h3>Seniors &amp; care groups</h3>
-
-    <p>
-      Accessible sensory engagement, gardening and meaningful tasks.
-    </p>
-
-  </article>
-
-  <!-- Communities -->
-  <article class="card">
-
-    <div class="icon-box" aria-hidden="true">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="#2f3f1f"
-        stroke-width="1.8"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        style="display:block;"
-      >
-        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-        <circle cx="9" cy="7" r="4"></circle>
-        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-      </svg>
-    </div>
-
-    <h3>Communities</h3>
-
-    <p>
-      Intergenerational activities and shared care for nature and place.
-    </p>
-
-  </article>
-
-</div>
-
-
+        </div>
       </div>
     </section>
 
-    <!-- Team -->
+    <!-- Our Ecosystem -->
+    <!-- New continuously scrolling collaborator logo gallery -->
     <section class="section">
+
       <div class="container">
-        <div class="mini-cta">
-          <div>
-            <span class="eyebrow">The people behind Second Nature</span>
-            <h2>Our leadership and advisors</h2>
-            <p>Meet the team supporting our nature-centred work.</p>
-          </div>
-          <a class="btn btn-primary" href="team.html">Meet the team &nearrow;</a>
+        <div class="section-head center">
+          <h2>Our Ecosystem</h2>
         </div>
       </div>
+
+      <div
+        class="ecosystem-marquee"
+        aria-label="Organisations we have worked with"
+      >
+        <div class="ecosystem-track">
+
+          <!-- First set of 12 logos -->
+          <div class="ecosystem-set">
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo1.webp" alt="Collaborator logo 1" loading="lazy">
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo2.webp" alt="Collaborator logo 2" loading="lazy">
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo3.webp" alt="Collaborator logo 3" loading="lazy">
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo4.webp" alt="Collaborator logo 4" loading="lazy">
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo5.webp" alt="Collaborator logo 5" loading="lazy">
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo6.webp" alt="Collaborator logo 6" loading="lazy">
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo7.webp" alt="Collaborator logo 7" loading="lazy">
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo8.webp" alt="Collaborator logo 8" loading="lazy">
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo9.webp" alt="Collaborator logo 9" loading="lazy">
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo10.webp" alt="Collaborator logo 10" loading="lazy">
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo11.webp" alt="Collaborator logo 11" loading="lazy">
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo12.webp" alt="Collaborator logo 12" loading="lazy">
+            </div>
+
+          </div>
+
+          <!-- Repeated logos for continuous scrolling -->
+          <div class="ecosystem-set" aria-hidden="true">
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo1.webp" alt="" loading="lazy">
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo2.webp" alt="" loading="lazy">
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo3.webp" alt="" loading="lazy">
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo4.webp" alt="" loading="lazy">
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo5.webp" alt="" loading="lazy">
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo6.webp" alt="" loading="lazy">
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo7.webp" alt="" loading="lazy">
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo8.webp" alt="" loading="lazy">
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo9.webp" alt="" loading="lazy">
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo10.webp" alt="" loading="lazy">
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo11.webp" alt="" loading="lazy">
+            </div>
+
+            <div class="ecosystem-logo">
+              <img src="assets/img/logo12.webp" alt="" loading="lazy">
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
     </section>
 
     <!-- Contact call to action -->
     <section class="section tight">
       <div class="container">
+
         <div class="mini-cta">
           <div>
             <h2>Let us bring nature closer to your community.</h2>
-            <p>Share your objectives and participant needs. We will work with you to plan a suitable programme.</p>
+
+            <p>
+              Share your objectives and participant needs.
+              We will work with you to plan a suitable programme.
+            </p>
           </div>
-          <a class="btn btn-primary" href="contact.html">Enquire about a session &nearrow;</a>
+
+          <a class="btn btn-primary" href="contact.html">
+            Enquire about a session &nearr;
+          </a>
         </div>
+
       </div>
     </section>
 
@@ -432,12 +662,20 @@
               alt="SecondNatureSG. Bringing nature back to the people"
             >
           </a>
-          <p style="max-width: 290px; margin: 24px 0 0;">Growing stronger connections between people, places and the living world.</p>
-          <p class="small" style="margin-top: 15px;">Based in Singapore. Activities for all ages.</p>
+
+          <p style="max-width: 290px; margin: 24px 0 0;">
+            Growing stronger connections between people,
+            places and the living world.
+          </p>
+
+          <p class="small" style="margin-top: 15px;">
+            Based in Singapore. Activities for all ages.
+          </p>
         </div>
 
         <div>
           <h4>Explore</h4>
+
           <div class="footer-links">
             <a href="about.html">Our story</a>
             <a href="programmes.html">Programmes</a>
@@ -450,6 +688,7 @@
 
         <div>
           <h4>Our work</h4>
+
           <div class="footer-links">
             <a href="service-details.html">Nature-based sessions</a>
             <a href="consultancy.html">Consultancy &amp; training</a>
@@ -460,16 +699,27 @@
 
         <div>
           <h4>Connect with us</h4>
-          <p>For schools, communities, care settings and workplaces.</p>
-          <a class="email-link" href="mailto:hello@secondnature.com.sg">hello@secondnature.com.sg</a>
-          <a class="btn btn-primary" href="contact.html">Start a conversation &nearrow;</a>
+
+          <p>
+            For schools, communities, care settings and workplaces.
+          </p>
+
+          <a
+            class="email-link"
+            href="mailto:hello@secondnature.com.sg"
+          >
+            hello@secondnature.com.sg
+          </a>
+
+          <a class="btn btn-primary" href="contact.html">
+            Start a conversation &nearr;
+          </a>
         </div>
 
       </div>
 
       <div class="footer-small">
         <div>&copy; 2026 Second Nature. All rights reserved.</div>
-
       </div>
 
     </div>
