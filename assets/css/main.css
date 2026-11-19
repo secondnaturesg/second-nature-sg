@@ -1879,19 +1879,29 @@ h6,
     font-size: .76rem;
   }
 
+
   .gallery-item figcaption span {
     font-size: .69rem;
   }
-/* Square images for all programme detail pages */
+
+}
+
+/* SQUARE IMAGES FOR ALL PROGRAMME DETAIL PAGES */
 
 .details-banner.programme-detail-banner {
   width: 100%;
-  max-width: 650px;
+  max-width: none;
   height: auto;
   aspect-ratio: 1 / 1;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 25px;
 }
-}
+
+/* REMOVE EXISTING PHOTO OVERLAY */
+
+.details-banner.programme-detail-banner::after {
+  content: none;
+  display: none;
 }
